@@ -1,6 +1,11 @@
 package Recu2024MARTIN;
 
+import Recu2024MARTIN.filtros.Condicion;
+
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public abstract class ElementoCol extends ElementoBiblioteca {
 
@@ -37,16 +42,17 @@ public abstract class ElementoCol extends ElementoBiblioteca {
     }
 
     @Override
-    public ArrayList<Libro> buscar(Condicion c) {
+    public ArrayList<Libro> buscar(Condicion c, Comparator<Libro> comp) {
         ArrayList<Libro> devolverFinal = new ArrayList<>();
         for (ElementoBiblioteca e : elementos){
-           ArrayList<Libro> aux = e.buscar(c);
+           ArrayList<Libro> aux = e.buscar(c,comp);
            for (Libro l : aux){
                if (!devolverFinal.contains(l)){
                    devolverFinal.add(l);
                }
            }
         }
+        Collections.sort(devolverFinal,comp);
         return devolverFinal;
     }
 }

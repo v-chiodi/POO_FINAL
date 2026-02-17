@@ -1,6 +1,8 @@
 package Recu2024MARTIN;
 
-public class ColSec extends ElementoCol{
+import Recu2024MARTIN.filtros.Condicion;
+
+public abstract class ColSec extends ElementoCol{
 
     @Override
     public int getPuntaje() {
@@ -19,5 +21,7 @@ public class ColSec extends ElementoCol{
         }
         return suma;
     }
+
+
 //getter setter constructores
 }

@@ -6,7 +6,7 @@ public class LibroVar extends Libro {
     @Override
     public int getTiempo() {
         int totalTiempo = -1;
-        totalTiempo = (getGeneros().size() * this.getTiempo()) / divisor;
+        totalTiempo = (getGeneros().size() * super.getTiempo()) / divisor;
         return totalTiempo;
     }
 }
