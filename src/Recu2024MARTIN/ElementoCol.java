@@ -31,6 +31,7 @@ public abstract class ElementoCol extends ElementoBiblioteca {
         devolver.addAll(elementos); //copia una lista en otra aux
         return devolver; //devuelve la aux
     }
+
     public void addElem(ElementoBiblioteca eAdd){
         elementos.add(eAdd);
 
